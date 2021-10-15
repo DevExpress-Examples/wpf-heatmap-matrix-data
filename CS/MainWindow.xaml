@@ -1,0 +1,70 @@
+﻿<dx:ThemedWindow
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
+    xmlns:dxh="http://schemas.devexpress.com/winfx/2008/xaml/heatmap" 
+    xmlns:dxc="http://schemas.devexpress.com/winfx/2008/xaml/charts"
+    xmlns:local="clr-namespace:HeatmapMatrixData"
+    x:Class="HeatmapMatrixData.MainWindow"
+    Title="MainWindow" Height="500" Width="800">
+    <Grid>
+        <dxh:HeatmapControl>
+            <dxh:HeatmapControl.DataContext>
+                <local:MatrixHeatmapViewModel/>
+            </dxh:HeatmapControl.DataContext>
+            <dxh:HeatmapControl.DataAdapter>
+                <dxh:HeatmapMatrixAdapter XArguments="{Binding XArguments}" 
+                                          YArguments="{Binding YArguments}" 
+                                          Values="{Binding Values}"/>
+            </dxh:HeatmapControl.DataAdapter>
+            <dxh:HeatmapControl.ColorProvider>
+                <dxh:HeatmapRangeColorProvider ApproximateColors="True" 
+                                               LegendItemPattern="${V1}-{V2}K">
+                    <dxh:HeatmapRangeColorProvider.Palette>
+                        <dxc:CustomPalette>
+                            <dxc:CustomPalette.Colors>
+                                <Color>White</Color>
+                                <Color>SkyBlue</Color>
+                                <Color>DarkBlue</Color>
+                            </dxc:CustomPalette.Colors>
+                        </dxc:CustomPalette>
+                    </dxh:HeatmapRangeColorProvider.Palette>
+                    <dxh:HeatmapRangeColorProvider.RangeStops>
+                        <dxh:HeatmapRangeStop Value="0" Type="Percentage"/>
+                        <dxh:HeatmapRangeStop Value="200"/>
+                        <dxh:HeatmapRangeStop Value="400"/>
+                        <dxh:HeatmapRangeStop Value="600"/>
+                        <dxh:HeatmapRangeStop Value="800"/>
+                        <dxh:HeatmapRangeStop Value="1" Type="Percentage"/>
+                    </dxh:HeatmapRangeColorProvider.RangeStops>
+                </dxh:HeatmapRangeColorProvider>
+            </dxh:HeatmapControl.ColorProvider>
+            <dxh:HeatmapControl.Legend>
+                <dxh:HeatmapLegend Margin="0, 0, 4, 10">
+                    <dxh:HeatmapLegend.Title>
+                        <dxc:LegendTitle Content="Revenue"/>
+                    </dxh:HeatmapLegend.Title>
+                </dxh:HeatmapLegend>
+            </dxh:HeatmapControl.Legend>
+            <dxh:HeatmapControl.AxisX>
+                <dxh:HeatmapAxis>
+                    <dxh:HeatmapAxis.Title>
+                        <dxc:AxisTitle Content="Region"/>
+                    </dxh:HeatmapAxis.Title>
+                </dxh:HeatmapAxis>
+            </dxh:HeatmapControl.AxisX>
+            <dxh:HeatmapControl.AxisY>
+                <dxh:HeatmapAxis Reverse="True">
+                    <dxh:HeatmapAxis.Title>
+                        <dxc:AxisTitle Content="Category"/>
+                    </dxh:HeatmapAxis.Title>
+                </dxh:HeatmapAxis>
+            </dxh:HeatmapControl.AxisY>
+            <dxh:HeatmapControl.Label>
+                <dxh:HeatmapLabel Foreground="Black" 
+                                  Background="#70ffffff" 
+                                  Padding="2"/>
+            </dxh:HeatmapControl.Label>
+        </dxh:HeatmapControl>
+    </Grid>
+</dx:ThemedWindow>
