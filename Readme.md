@@ -33,3 +33,7 @@ To load array data to a heatmap, follow the steps below:
 ## Documentation
 
 - [HeatmapControl](https://docs.devexpress.com/WPF/DevExpress.Xpf.Charts.Heatmap.HeatmapControl?v=21.2&p=netframework)
+
+## More Examples
+
+- [How to Create a Heatmap Chart Based on a Data Source](https://github.com/DevExpress-Examples/wpf-heatmap-bind-to-data-source)
