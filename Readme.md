@@ -26,7 +26,7 @@ To load array data to a heatmap, follow the steps below:
 ## Files to Look At
 
 - [MainWindow.xaml](./CS/MainWindow.xaml) (VB: [MainWindow.xaml](./VB/MainWindow.xaml))
-- [MainWindow.xaml.cs](./CS/MainWindow.xaml.cs) (VB: [MainWindow.xaml.cs](./VB/MainWindow.xaml.cs))
+- [MainWindow.xaml.cs](./CS/MainWindow.xaml.cs) (VB: [MainWindow.xaml.vb](./VB/MainWindow.xaml.vb))
 
 <!-- default file list end -->
 
