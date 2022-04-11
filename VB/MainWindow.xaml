@@ -17,6 +17,9 @@
                                           YArguments="{Binding YArguments}" 
                                           Values="{Binding Values}"/>
             </dxh:HeatmapControl.DataAdapter>
+            <dxh:HeatmapControl.Titles>
+                <dxc:Title Content="Sales by Categories" HorizontalAlignment="Center"/>
+            </dxh:HeatmapControl.Titles>
             <dxh:HeatmapControl.ColorProvider>
                 <dxh:HeatmapRangeColorProvider ApproximateColors="True" 
                                                LegendItemPattern="${V1}-{V2}K">
