@@ -6,7 +6,7 @@
     xmlns:dxc="http://schemas.devexpress.com/winfx/2008/xaml/charts"
     xmlns:local="clr-namespace:HeatmapMatrixData"
     x:Class="HeatmapMatrixData.MainWindow"
-    Title="MainWindow" Height="500" Width="800">
+    Title="Heatmap" Height="500" Width="800">
     <Grid>
         <dxh:HeatmapControl>
             <dxh:HeatmapControl.DataContext>
