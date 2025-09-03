@@ -13,7 +13,7 @@ This example shows how to use string and numeric value arrays to create a heatma
 
 To load array data to a heatmap, follow the steps below:
 
-- Create a [HeatmapMatrixAdapter](https://docs.devexpress.com/WPF/DevExpress.Xpf.Charts.Heatmap.HeatmapMatrixAdapter?v=21.2&p=netframework) object. 
+- Create a [HeatmapMatrixAdapter](https://docs.devexpress.com/WPF/DevExpress.Xpf.Charts.Heatmap.HeatmapMatrixAdapter) object. 
 
 - Specify the following adapter properties:
 
@@ -45,3 +45,4 @@ To load array data to a heatmap, follow the steps below:
 
 (you will be redirected to DevExpress.com to submit your response)
 <!-- feedback end -->
+
